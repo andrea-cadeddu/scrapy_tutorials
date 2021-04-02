@@ -2,7 +2,7 @@ from scrapy import Spider, Request
 
 class BooksSpider(Spider):
     name = "books"
-    start_urls = ["http://books.toscrape.com"]
+    start_urls = ["http://books.toscrape.com/"]
 
     def parse(self, response):
         for entry in response.css("article.product_pod"):
@@ -11,7 +11,6 @@ class BooksSpider(Spider):
             stars = entry.css("p.star-rating::attr(class)").get()
             price = entry.css("p.price_color::text").get()
             in_stock = entry.css("p.instock::text").extract()[1].strip()
-            print(in_stock)
             yield {
                 "title": title,
                 "url": url,
