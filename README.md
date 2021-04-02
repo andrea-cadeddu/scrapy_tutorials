@@ -29,12 +29,6 @@ To make sure you have installed the library correctly, run the ```scrapy``` comm
 
 ## Usage
 
-Using the terminal, move up to the *scrapy_tutorials* folder
-
-```shell
-cd scrapy_tutorials
-```
-
 Scrape the data and save the results to json data
 * ```spider_name```: [*books*, *quotes*] 
 * ```filename```: any value
